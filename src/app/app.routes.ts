@@ -1,7 +1,4 @@
 import { Routes } from '@angular/router';
-import { List } from '@products/pages/list/list';
-import { ProductDetail } from '@products/pages/product-detail/product-detail';
-import { About } from '@info/pages/about/about';
 import { NotFound } from '@info/pages/not-found/not-found';
 import { Layout } from '@shared/components/layout/layout';
 
@@ -21,7 +18,9 @@ export const routes: Routes = [
       {
         path: 'product/:id',
         loadComponent: () =>
-          import('./domains/shared/services/product').then((m) => m.ProductService),
+          import('./domains/products/pages/product-detail/product-detail').then(
+            (m) => m.ProductDetail
+          ),
       },
     ],
   },

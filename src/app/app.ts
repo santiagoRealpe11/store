@@ -4,10 +4,10 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [CommonModule, RouterOutlet],
-  template: '<router-outlet />'
+  template: '<router-outlet />',
 })
-
 export class App {
   protected readonly title = signal('store');
 }
